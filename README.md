@@ -115,7 +115,29 @@ git clone https://github.com/YOUR_USERNAME/task-manager.git
 cd task-manager
 ```
 
-### 2. Setup Backend
+### ⚡ Quick Start (Monorepo root)
+
+You can run everything from the project root:
+
+```bash
+# Install all dependencies for both backend and frontend
+npm run install:all
+
+# Run backend automated integration tests
+npm test
+
+# In terminal 1: Start backend (http://localhost:5000)
+npm run dev:backend
+
+# In terminal 2: Start frontend (http://localhost:3000)
+npm run dev:frontend
+```
+
+---
+
+### Manual Setup (Separate terminals)
+
+#### 1. Setup Backend
 
 ```bash
 cd backend
@@ -123,28 +145,22 @@ cd backend
 # Install dependencies
 npm install
 
-# Copy environment variables
-cp .env.example .env
-
 # Start the development server (with auto-reload)
 npm run dev
 
-# OR start production server
-npm start
+# Run automated API integration tests
+npm test
 ```
 
 Backend runs at: **http://localhost:5000**
 
-### 3. Setup Frontend
+#### 2. Setup Frontend
 
 ```bash
 cd frontend
 
 # Install dependencies
 npm install
-
-# Copy environment variables
-cp .env.example .env
 
 # Start the development server
 npm run dev
